@@ -17,9 +17,10 @@
 }
 
 .contatiner {
-  max-width: 1200px;
+  max-width: 1240px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .wrapper {
@@ -104,6 +105,7 @@
   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   grid-gap: 20px;
 }
 
@@ -137,21 +139,73 @@
 }
 
 .card__button {
-  margin-top: 30px;
+  /*margin-top: 30px;
   border: 2px solid #A6C81E;
   border-radius: 10px;
   padding: 12px 16px;
-  font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
   color: #A6C81E;
-  cursor: pointer;
+  width: 100%;*/
   width: 100%;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  margin-top: 20px;
+  padding: 12px 16px;
+  border: 2px solid #A6C81E;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 20px;
+  line-height: 20px;
+  color: #A6C81E;
   
 }
 
-.end__button{
+.show-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+  padding: 12px 16px;
+  border: 2px solid #A6C81E;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  line-height: 20px;
+  /*color: var(--main-link-color);*/
+}
+.show-more::before{
+  content: url('arrow.svg');
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.footer {
+  margin-top: 40px;
+}
+
+.footer__row {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  justify-content: space-between;
+  padding: 40px 0;
+  /*width: 93%;*/
+
+}
+
+.footer__email{
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  line-height: 19px;
+  /*color: var(--main-link-color);*/
+}
+/*.end__button{
   background-color: Transparent;
   margin-top: 60px;
   border: 2px solid #A6C81E;
@@ -164,7 +218,7 @@
   color: #A6C81E;
   cursor: pointer;
   width: 100%;
-  /*display: flex;*/
+  /*display: flex;
 }
 
 .end__button::before {
@@ -206,4 +260,25 @@
   font-size: 16px;
   line-height: 19px;
   color: #838383;
+}*/
+
+@media screen and (max-wigth: 1240px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-wigth: 1023px) {
+  .h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card:nth-child(n+10) {
+    display: none;
+  }
 }
